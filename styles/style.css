@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-white: #f0f0f0;
+  --main-blue: #0000ff;
+  --main-light-blue: #005eff;
+  --main-gray: #413039;
+  --main-black: #141414;
+  --main-gold: #ff7f50;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  width: 100%;
+}
+
+/* _____________________navbar */
+
+.nav {
+  top: 0;
+  display: flex;
+  background-color: blue;
+  position: sticky;
+  padding: 2rem 4rem;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list a {
+  padding: 2rem 3rem;
+}
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+/* ________________btn */
+
+.btn {
+  padding: 1rem 6rem;
+  border-radius: 2px;
+  font-size: 2rem;
+}
+
+.btn-show-all {
+  background: var(--main-black);
+}
+
+.btn-show-all:hover {
+  background: var(--main-blue);
+}
+
+.btn-show-all > i {
+  margin-left: 20px;
+}
+
+/* ___________________welcome-section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background: linear-gradient(45deg, #a644f4, #6a02be, #b9334f);
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-white);
+}
+
+/* _________________Projects section */
+
+.projects-section {
+  padding: 7rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  align-items: center;
+  text-align: center;
+}
+
+.projects-section-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  color: var(--main-black);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+}
+
+.project {
+  background: var(--main-black);
+  border-radius: 2px;
+}
+
+.project:hover {
+  color: var(--main-gold);
+  box-shadow: 1px 1px 22px rgba(0, 0, 10, 0.201);
+}
+
+.project-image {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  padding: 1.7rem 0rem;
+}
+
+/* ____________________Contact section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+  background-image: linear-gradient(
+    to right top,
+    #390439,
+    #340c3f,
+    #2d1244,
+    #261749,
+    #1c1c4d,
+    #13214f,
+    #092651,
+    #002a51,
+    #002f4e,
+    #003346,
+    #00353c,
+    #043632
+  );
+}
+
+.contact-head {
+  font-size: 5rem;
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  color: var(--main-gold);
+}
+
+/* _________________________Footer */
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: var(--main-black);
+  border-top: 4px solid var(--main-blue);
+}
