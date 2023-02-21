@@ -16,7 +16,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 0.7vw;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -41,7 +41,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-white);
+  color: inherit;
 }
 
 img {
@@ -51,15 +51,16 @@ img {
 /* _____________________navbar */
 
 .nav {
-  top: 0;
+  /* top: 0; */
   display: flex;
-  background-color: blue;
-  position: sticky;
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 2rem 4rem;
-  flex-direction: row;
   justify-content: space-between;
   z-index: 10;
   overflow: hidden;
+  position: fixed;
+  /* position: sticky; */
+  width: 100vw;
 }
 
 .nav-list {
@@ -69,8 +70,12 @@ img {
 .nav-list a {
   padding: 2rem 3rem;
 }
-.nav-list a:hover {
-  background: var(--main-blue);
+
+.BgColour {
+  color: black;
+  transition: all 0.5s;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
 }
 
 /* ________________btn */
@@ -100,12 +105,14 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 80vh;
+  width: 100vw;
+
   background: linear-gradient(45deg, #a644f4, #6a02be, #b9334f);
 }
 
 .welcome-section > p {
-  font-size: 3rem;
+  font-size: 3vw;
   font-weight: 200;
   font-style: italic;
   color: var(--main-white);
@@ -132,7 +139,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 3rem;
-  width: 1300px;
+  width: 90%;
 }
 
 .two {
@@ -204,6 +211,7 @@ img {
 
 .contact-links {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 5rem;
 }
 
@@ -224,4 +232,13 @@ footer {
   padding: 2rem;
   background: var(--main-black);
   border-top: 4px solid var(--main-blue);
+}
+
+@media only screen and (max-width: 775px) {
+  .nav {
+    padding: 10px 0px;
+    top: 0;
+    position: fixed;
+    flex-wrap: wrap;
+  }
 }
