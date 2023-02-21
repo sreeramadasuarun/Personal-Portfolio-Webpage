@@ -59,6 +59,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   z-index: 10;
+  overflow: hidden;
 }
 
 .nav-list {
@@ -85,7 +86,7 @@ img {
 }
 
 .btn-show-all:hover {
-  background: var(--main-blue);
+  background: var(--main-gold);
 }
 
 .btn-show-all > i {
@@ -128,13 +129,22 @@ img {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3rem;
+  width: 1300px;
+}
+
+.two {
+  grid-column: 2/4;
+}
+.five {
+  grid-column: 2/4;
 }
 
 .project {
+  border-radius: 2.1rem;
   background: var(--main-black);
-  border-radius: 2px;
 }
 
 .project:hover {
@@ -143,6 +153,8 @@ img {
 }
 
 .project-image {
+  border-radius: 2rem 2rem 0 0;
+
   height: 25rem;
   width: 100%;
   object-fit: cover;
